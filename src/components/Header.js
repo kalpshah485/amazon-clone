@@ -7,7 +7,7 @@ import {
 
 export default function Header() {
     return (
-        <header>
+        <header className="sticky top-0 z-50">
             {/* top nav */}
             <div className='flex items-center bg-amazon_blue p-1 flex-grow py-2'>
                 {/* amazon logo */}

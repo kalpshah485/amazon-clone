@@ -13,8 +13,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async (session) => {
-  console.log(session.amount_total, session.amount);
-  console.log(typeof session.amount_total, typeof session.amount);
   return app
     .firestore()
     .collection("users")

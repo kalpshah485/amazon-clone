@@ -26,6 +26,8 @@ export default function Checkout() {
       name: session.user.name
     });
 
+    localStorage.removeItem('basket');
+
     const result = await stripe.redirectToCheckout({
       sessionId: checkoutSession.data.id
     });
